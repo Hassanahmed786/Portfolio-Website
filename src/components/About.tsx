@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 import Hero from './Images/Hero.jpg';
-import Resume from './Images/Resume.pdf';
+import Resume1 from './Images/Resume1.pdf';
 
 const About = () => {
   return (
@@ -40,7 +40,7 @@ const About = () => {
               </p>
               <div className="pt-10 flex justify-center space-x-4">
                 <a
-                  href={Resume}
+                  href={Resume1}
                   download
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                 >
@@ -48,7 +48,7 @@ const About = () => {
                   Download Resume
                 </a>
                 <a
-                  href={Resume}
+                  href={Resume1}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
