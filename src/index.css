@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.honeycomb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .honeycomb-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: calc(50% - 75px);
+    padding-right: 0;
+  }
+
+  .honeycomb-grid > :nth-child(2n) {
+    transform: translateX(50%);
+  }
+}
+
+.honeycomb-cell {
+  position: relative;
+  width: 100%;
+  padding-top: 115%;
+  transition: all 0.3s ease;
+}
+
+.honeycomb-cell:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.honeycomb-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.honeycomb-cell:hover .honeycomb-content {
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1),
+              0 8px 10px -6px rgba(59, 130, 246, 0.1);
+}
+
+.badge-modal-overlay {
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.badge-modal {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.badge-modal.active {
+  transform: scale(1);
+  opacity: 1;
+}

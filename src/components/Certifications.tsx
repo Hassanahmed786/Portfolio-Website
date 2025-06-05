@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Award } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
+// Image Imports
 import IBM_1 from './Images/IBM_1.png';
 import IBM_2 from './Images/IBM_2.png';
 import AWS_1 from './Images/AWS_1.png';
@@ -14,7 +17,6 @@ import META_3 from './Images/META_3.png';
 import META_4 from './Images/META_4.png';
 import META_5 from './Images/META_5.png';
 import META_6 from './Images/META_6.png';
-import HackerRank_1 from './Images/HackerRank_1.png';
 import HackerRank_2 from './Images/HackerRank_2.png';
 import HackerRank_3 from './Images/HackerRank_3.png';
 import HackerRank_4 from './Images/HackerRank_4.png';
@@ -23,7 +25,6 @@ import HackerRank_6 from './Images/HackerRank_6.png';
 import HackerRank_7 from './Images/HackerRank_7.png';
 import Forage_1 from './Images/Forage_1.png';
 
-
 const certifications = [
   {
     title: 'Artificial Intelligence Fundamentals',
@@ -31,6 +32,7 @@ const certifications = [
     image: IBM_1,
     provider: 'IBM-SkillsBuild',
     certificateUrl: 'https://www.credly.com/badges/473acf17-bf30-4c8e-81d1-9449dee37794/public_url',
+    isProfessional: true,
   },
   {
     title: 'AWS Educate Introduction to Generative AI',
@@ -38,6 +40,7 @@ const certifications = [
     image: AWS_1,
     provider: 'Amazon Web Services',
     certificateUrl: 'https://www.credly.com/badges/11cc67a4-9c6c-4e77-8e8b-11e97fb84604/public_url',
+    isProfessional: true,
   },
   {
     title: 'AI Foundations',
@@ -45,6 +48,7 @@ const certifications = [
     image: IBM_2,
     provider: 'IBM-SkillsBuild',
     certificateUrl: 'https://www.credly.com/badges/186745d6-6e65-436e-b5bc-9241cba17b0c/public_url',
+    isProfessional: true,
   },
   {
     title: 'Develop GenAI Apps with Gemini and Streamlit Skill Badge',
@@ -52,6 +56,7 @@ const certifications = [
     image: Google_1,
     provider: 'Google Cloud',
     certificateUrl: 'https://www.credly.com/badges/37e0ecac-801c-4a9a-98d0-76c09d278819/public_url',
+    isProfessional: true,
   },
   {
     title: 'Prompt Design in Vertex AI Skill Badge',
@@ -59,6 +64,7 @@ const certifications = [
     image: Google_3,
     provider: 'Google Cloud',
     certificateUrl: 'https://www.credly.com/badges/2dfec215-37c0-43ae-8503-eddc29f9c96d/public_url',
+    isProfessional: true,
   },
   {
     title: 'AWS Educate Machine Learning Foundations',
@@ -66,6 +72,7 @@ const certifications = [
     image: AWS_2,
     provider: 'Amazon Web Services',
     certificateUrl: 'https://www.credly.com/badges/19c2635c-6816-4041-ae47-b61fd98cc12e/public_url',
+    isProfessional: true,
   },
   {
     title: 'Introduction to Cybersecurity',
@@ -73,6 +80,7 @@ const certifications = [
     image: Cisco_1,
     provider: 'Cisco',
     certificateUrl: 'https://www.credly.com/badges/e490a738-c985-4df7-8b01-ed0d34b5ff41/public_url',
+    isProfessional: true,
   },
   {
     title: 'Version Control',
@@ -80,6 +88,7 @@ const certifications = [
     image: META_3,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/7dbb9c714ebc70858f2089154789aa77',
+    isProfessional: false,
   },
   {
     title: 'React Basics',
@@ -87,6 +96,7 @@ const certifications = [
     image: META_5,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/c1c343b70ca375f4d57707e7a98bd711',
+    isProfessional: false,
   },
   {
     title: 'Advanced React',
@@ -94,6 +104,7 @@ const certifications = [
     image: META_6,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/01021e6ce330860f7a8822fbbec8c73c',
+    isProfessional: false,
   },
   {
     title: 'Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge',
@@ -101,6 +112,7 @@ const certifications = [
     image: Google_2,
     provider: 'Google Cloud',
     certificateUrl: 'https://www.credly.com/badges/ad1c4496-1e11-41f8-bc93-f6856db2d3e5/public_url',
+    isProfessional: true,
   },
   {
     title: 'Programming with JavaScript',
@@ -108,6 +120,7 @@ const certifications = [
     image: META_2,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/d3d6551f4f94ca3e12d12c63e5273059',
+    isProfessional: false,
   },
   {
     title: 'HTML and CSS in depth',
@@ -115,6 +128,7 @@ const certifications = [
     image: META_4,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/576914ccbf4318ef12afed045bdc3d09',
+    isProfessional: false,
   },
   {
     title: 'Introduction to Front-End Development',
@@ -122,6 +136,7 @@ const certifications = [
     image: META_1,
     provider: 'Coursera',
     certificateUrl: 'https://coursera.org/share/c7ccb769cbbc2b4f568fdbcf82c3bf9c',
+    isProfessional: false,
   },
   {
     title: 'Problem Solving (Basic)',
@@ -129,6 +144,7 @@ const certifications = [
     image: HackerRank_6,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/21df71dee7c3',
+    isProfessional: false,
   },
   {
     title: 'CSS (Basic)',
@@ -136,6 +152,7 @@ const certifications = [
     image: HackerRank_2,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/1d37f26128c0',
+    isProfessional: false,
   },
   {
     title: 'C# (Basic)',
@@ -143,6 +160,7 @@ const certifications = [
     image: HackerRank_3,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/65b123f83fe0',
+    isProfessional: false,
   },
   {
     title: 'JavaScript (Basic)',
@@ -150,6 +168,7 @@ const certifications = [
     image: HackerRank_4,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/b0b7e0ecd83d',
+    isProfessional: false,
   },
   {
     title: 'React (Basic)',
@@ -157,6 +176,7 @@ const certifications = [
     image: HackerRank_5,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/d2a0632bc2e2',
+    isProfessional: false,
   },
   {
     title: 'Frontend Developer (React)',
@@ -164,6 +184,7 @@ const certifications = [
     image: HackerRank_6,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/e28784c16e5c',
+    isProfessional: false,
   },
   {
     title: 'SQL (Basic)',
@@ -171,6 +192,7 @@ const certifications = [
     image: HackerRank_7,
     provider: 'HackerRank',
     certificateUrl: 'https://www.hackerrank.com/certificates/iframe/1490719b0d29',
+    isProfessional: false,
   },
   {
     title: 'Software Engineering Job Simulation',
@@ -178,20 +200,23 @@ const certifications = [
     image: Forage_1,
     provider: 'Forage',
     certificateUrl: 'https://www.theforage.com/simulations/goldman-sachs/software-engineering-unei',
-  },
-  {
-    title: 'Problem Solving (Basic)',
-    description: 'Foundational knowledge in problem-solving and programming from HackerRank.',
-    image: HackerRank_1,
-    provider: 'HackerRank',
-    certificateUrl: 'https://www.hackerrank.com/certificates/iframe/21df71dee7c3',
+    isProfessional: true,
   },
 ];
 
 const Certifications = () => {
   const [showAll, setShowAll] = useState(false);
+  const [showProfessionalOnly, setShowProfessionalOnly] = useState(false);
 
-  const certificationsToShow = showAll ? certifications : certifications.slice(0, 3); // Initially show only 3 certifications
+  const navigate = useNavigate();
+
+  const filteredCertifications = showProfessionalOnly
+    ? certifications.filter((cert) => cert.isProfessional)
+    : certifications;
+
+  const certificationsToShow = showAll
+    ? filteredCertifications
+    : filteredCertifications.slice(0, 3);
 
   return (
     <section id="certifications" className="py-20 bg-grey-50">
@@ -205,6 +230,42 @@ const Certifications = () => {
           </p>
         </div>
 
+        {/* Filter Bar */}
+        <div className="mt-8 flex justify-center">
+          <div className="inline-flex rounded-md shadow-sm" role="group">
+            <button
+              type="button"
+              onClick={() => setShowProfessionalOnly(false)}
+              className={`px-4 py-2 text-sm font-medium border rounded-l-lg ${
+                !showProfessionalOnly
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
+              }`}
+            >
+              All Certifications
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowProfessionalOnly(true)}
+              className={`px-4 py-2 text-sm font-medium border-t border-b border-r ${
+                showProfessionalOnly
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
+              }`}
+            >
+              Professional Certifications
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate('/badges')}
+              className="px-4 py-2 text-sm font-medium border-t border-b border-r rounded-r-lg bg-white text-gray-900 border-gray-200 hover:bg-gray-50"
+            >
+              Badges
+            </button>
+          </div>
+        </div>
+
+        {/* Grid of Certifications */}
         <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
           {certificationsToShow.map((certification) => (
             <div
@@ -227,9 +288,7 @@ const Certifications = () => {
                     {certification.description}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <span
-                      className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800"
-                    >
+                    <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
                       {certification.provider}
                     </span>
                   </div>

@@ -1,20 +1,22 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import Project1 from '../components/Images/Project_Stock/Project1.jpg'
+import Project2 from '../components/Images/Project_Stock/Project2.webp'
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform built with React, Node.js, and PostgreSQL. Includes features like user authentication, product management, and payment processing.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    liveUrl: 'https://project1.com',
-    githubUrl: 'https://github.com/yourusername/project1',
+    title: 'AI Heathcare Platform',
+    description: 'A comprehensive healthcare platform that uses AI to provide personalized health recommendations, appointment scheduling.',
+    image: Project1,
+    technologies: [ 'React', 'Node.js', 'Express', 'MongoDB', 'AI/ML'],
+    liveUrl: 'https://doctorhealth.vercel.app/login',
+    githubUrl: 'https://github.com/Hassanahmed786/healthcare-ai-platform',
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io'],
+    title: 'Travel Buddy',
+    description: 'A travel planning application that helps users discover new destinations, create itineraries, and share travel experiences with friends.',
+    image: Project2 ,
+    technologies: [ 'React' , 'Node.js' , 'MongoDB', 'Google Maps API'],
     liveUrl: 'https://project2.com',
     githubUrl: 'https://github.com/yourusername/project2',
   },

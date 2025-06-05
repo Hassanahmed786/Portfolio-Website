@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { Typewriter } from 'react-simple-typewriter';
+import {Typewriter} from "react-simple-typewriter";
+
 
 const Hero = () => {
   const scrollToProjects = () => {
