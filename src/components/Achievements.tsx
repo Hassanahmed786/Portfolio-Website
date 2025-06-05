@@ -1,66 +1,44 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Award, Calendar, Link as LinkIcon } from 'lucide-react';
+import Vasavi from '../components/Images/Vasavi.png';
+import Anurag from '../components/Images/Anurag-University-1.png';
+import GirlScript from '../components/Images/GirlSript.jpg';
 
 const allAchievements = [
   {
     id: 1,
-    title: "Best Innovation Award",
-    shortDescription: "Recognized for developing an AI-powered content management system",
-    fullDescription: "Received the Best Innovation Award for developing an AI-powered content management system that increased content creation efficiency by 300% and reduced editorial time by 60%. The system is now being used by over 50 enterprise clients.",
-    date: "December 2023",
+    title: "Microsoft Learn Student Ambassador (MLSA)",
+    shortDescription: "Officially onboarded as a Microsoft Learn Student Ambassador in October 2024",
+    fullDescription: "Completed the Microsoft Learn Student Ambassador technical training and Community Influencer Path. Actively engaged in organizing events, workshops, and spreading Microsoft tech awareness at Anurag University and beyond.",
+    date: "October 2024",
     links: [
-      { title: "Award Ceremony", url: "https://example.com/ceremony" },
-      { title: "Project Details", url: "https://example.com/project" }
+      { title: "MLSA Profile", url: "https://mvp.microsoft.com/en-US/studentambassadors/profile/3fe26868-0992-4e30-a1b5-cc1c8f784bdf" },
     ],
-    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
   },
-  {
+    {
     id: 2,
-    title: "Tech Conference Speaker",
-    shortDescription: "Keynote speaker at WebSummit 2023",
-    fullDescription: "Delivered a keynote speech on 'The Future of Web Development' at WebSummit 2023, reaching an audience of over 5,000 developers and industry leaders. The presentation focused on emerging technologies and best practices in modern web development.",
-    date: "October 2023",
-    links: [
-      { title: "Conference Page", url: "https://example.com/websummit" },
-      { title: "Presentation Slides", url: "https://example.com/slides" }
-    ],
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80"
+    title: "3rd Prize - Vasavi College Hackathon",
+    shortDescription: "3rd place for developing a Tourism Travel App",
+    fullDescription: "Won 3rd prize at Vasavi Engineering College hackathon by developing an innovative tourism app that helps travelers discover hidden gems and authentic sites, enhancing travel experiences.",
+    date: "2024",
+    image: Vasavi
   },
-  {
+    {
     id: 3,
-    title: "Open Source Contribution",
-    shortDescription: "Major contributor to React Native",
-    fullDescription: "Recognized as a major contributor to React Native, with over 50 merged pull requests and 1000+ commits. Implemented critical performance improvements that reduced app startup time by 40% across all platforms.",
-    date: "September 2023",
-    links: [
-      { title: "GitHub Profile", url: "https://github.com" },
-      { title: "Contribution Stats", url: "https://example.com/stats" }
-    ],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+    title: "Open Source Contributor - GirlScript Summer of Code",
+    shortDescription: "Active contributor to open source projects under GirlScript",
+    fullDescription: "Contributed to various open source repositories during the GirlScript Summer of Code program, improving codebases, fixing bugs, and adding features. Developed skills in collaboration, Git, and community engagement.",
+    date: "Summer 2024",
+    image: GirlScript
   },
   {
     id: 4,
-    title: "Hackathon Winner",
-    shortDescription: "First place at Global Code Fest",
-    fullDescription: "Led a team of 4 developers to win first place at Global Code Fest 2023. Developed a real-time translation app using AI that supports 50+ languages and works offline.",
-    date: "August 2023",
-    links: [
-      { title: "Project Demo", url: "https://example.com/demo" },
-      { title: "News Coverage", url: "https://example.com/news" }
-    ],
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 5,
-    title: "Patent Granted",
-    shortDescription: "Innovative authentication system patent",
-    fullDescription: "Granted a patent for developing an innovative authentication system that combines biometric data with behavioral patterns, increasing security while reducing user friction by 80%.",
-    date: "July 2023",
-    links: [
-      { title: "Patent Details", url: "https://example.com/patent" },
-      { title: "Technical Paper", url: "https://example.com/paper" }
-    ],
-    image: "https://images.unsplash.com/photo-1496469888073-80de7e952517?auto=format&fit=crop&w=800&q=80"
+    title: "Winner - Anurag University Hackathon",
+    shortDescription: "3rd place at 24-hour hackathon developing a Learning Management System",
+    fullDescription: "Led a team to build a Learning Management System during a 24-hour hackathon at Anurag University with peer Shruti Keshri. The project improved remote education access and garnered appreciation for technical innovation.",
+    date: "December 2024",
+    image: Anurag
   }
 ];
 

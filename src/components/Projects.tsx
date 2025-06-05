@@ -25,7 +25,7 @@ const projects = [
     description: 'An AI-powered content generation tool that helps create blog posts, social media content, and marketing copy using OpenAI\'s GPT-3.',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
     technologies: ['React', 'Python', 'OpenAI API', 'FastAPI'],
-    liveUrl: 'https://project3.com',
+    liveUrl: 'https://project2.com',
     githubUrl: 'https://github.com/yourusername/project3',
   },
 ];
