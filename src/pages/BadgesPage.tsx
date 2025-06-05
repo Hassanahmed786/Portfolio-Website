@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Award, ExternalLink, X, Calendar, Building } from 'lucide-react';
-import Google_Badge1 from '../components/Images/Badges/Google_Badge1.png'
+import { Award, ExternalLink, X, Calendar, Building, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
 
@@ -181,10 +181,20 @@ const badges: Badge[] = [
 
 const BadgesPage = () => {
   const [selectedBadge, setSelectedBadge] = useState<Badge | null>(null);
+  const navigate = useNavigate();
 
   return (
       <div className="min-h-screen pt-16 bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Back to Home Button */}
+          <button
+            onClick={() => navigate('/')}
+            className="mb-8 flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Back to Home
+            </button>
+
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900">Professional Badges</h1>
             <p className="mt-4 text-xl text-gray-600">Achievements earned throughout my career</p>
