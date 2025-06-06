@@ -3,6 +3,8 @@ import { Award, ExternalLink, X, Calendar, Building, ArrowLeft } from 'lucide-re
 import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
+import AWS_logo from '../components/Images/Badges/AWS_logo.webp';
+import CISCO_Logo from '../components/Images/Badges/CISCO_Logo.png';
 
 interface Badge {
   id: number;
@@ -35,148 +37,67 @@ const badges: Badge[] = [
   },
   {
     id: 3,
-    name: "Meta Certified Developer",
-    issuer: "Meta",
-    date: "2023",
-    description: "Advanced certification showcasing expertise in developing applications using Meta's platforms and technologies.",
-    verificationUrl: "https://meta.com/verification",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=200&q=80"
+    name: "Artificial Intelligence Fundamentals",
+    issuer: "IBM",
+    date: "2025",
+    description: "Certification covering the basics of artificial intelligence, including machine learning, natural language processing, and AI ethics.",
+    verificationUrl: "https://www.credly.com/badges/473acf17-bf30-4c8e-81d1-9449dee37794/public_url",
+    image: IBM_Logo
   },
   {
     id: 4,
-    name: "Microsoft Azure Expert",
-    issuer: "Microsoft",
-    date: "2023",
-    description: "Expert-level certification for Azure cloud services, covering advanced topics in cloud architecture and implementation.",
-    verificationUrl: "https://microsoft.com/verification",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f33139?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 5,
-    name: "Certified Kubernetes Administrator",
-    issuer: "CNCF",
-    date: "2023",
-    description: "Professional certification validating expertise in Kubernetes administration and container orchestration.",
-    verificationUrl: "https://kubernetes.io/verification",
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 6,
-    name: "Docker Certified Associate",
-    issuer: "Docker",
-    date: "2023",
-    description: "Professional certification demonstrating expertise in containerization and Docker technologies.",
-    verificationUrl: "https://docker.com/verification",
-    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 7,
-    name: "Terraform Associate",
-    issuer: "HashiCorp",
-    date: "2023",
-    description: "Certification validating skills in infrastructure automation using Terraform.",
-    verificationUrl: "https://hashicorp.com/verification",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 8,
-    name: "MongoDB Certified Developer",
-    issuer: "MongoDB",
-    date: "2022",
-    description: "Professional certification demonstrating expertise in MongoDB database development and administration.",
-    verificationUrl: "https://mongodb.com/verification",
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 9,
-    name: "React Developer Certification",
-    issuer: "Meta",
-    date: "2022",
-    description: "Advanced certification showcasing proficiency in React.js development and modern frontend technologies.",
-    verificationUrl: "https://meta.com/verification",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 1,
-    name: "AWS Certified Solutions Architect",
+    name: "AWS Educate Introduction to Generative AI",
     issuer: "Amazon Web Services",
-    date: "2024",
-    description: "Professional level certification for designing distributed systems on AWS. Demonstrates expertise in building secure and robust applications using AWS services.",
-    verificationUrl: "https://aws.amazon.com/verification",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 2,
-    name: "Google Cloud Professional",
-    issuer: "Google",
-    date: "2023",
-    description: "Expert-level certification validating proficiency in designing, developing, and managing solutions using Google Cloud Platform technologies.",
-    verificationUrl: "https://google.com/verification",
-    image: "https://images.unsplash.com/photo-1573167243872-43c6433b9d40?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 3,
-    name: "Meta Certified Developer",
-    issuer: "Meta",
-    date: "2023",
-    description: "Advanced certification showcasing expertise in developing applications using Meta's platforms and technologies.",
-    verificationUrl: "https://meta.com/verification",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    id: 4,
-    name: "Microsoft Azure Expert",
-    issuer: "Microsoft",
-    date: "2023",
-    description: "Expert-level certification for Azure cloud services, covering advanced topics in cloud architecture and implementation.",
-    verificationUrl: "https://microsoft.com/verification",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f33139?auto=format&fit=crop&w=200&q=80"
+    date: "2025",
+    description: "Introduction to Generative AI using AWS services, covering foundational concepts and practical applications.",
+    verificationUrl: "https://www.credly.com/badges/11cc67a4-9c6c-4e77-8e8b-11e97fb84604/public_url",
+    image: AWS_logo
   },
   {
     id: 5,
-    name: "Certified Kubernetes Administrator",
-    issuer: "CNCF",
-    date: "2023",
-    description: "Professional certification validating expertise in Kubernetes administration and container orchestration.",
-    verificationUrl: "https://kubernetes.io/verification",
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=200&q=80"
+    name: "Prompt Design in Vertex AI Skill Badge",
+    issuer: "Google",
+    date: "2024",
+    description: "Skill badge demonstrating expertise in designing effective prompts for AI models using Google Vertex AI.",
+    verificationUrl: "https://www.credly.com/badges/2dfec215-37c0-43ae-8503-eddc29f9c96d/public_url",
+    image: GOOGLE_Logo
   },
   {
     id: 6,
-    name: "Docker Certified Associate",
-    issuer: "Docker",
-    date: "2023",
-    description: "Professional certification demonstrating expertise in containerization and Docker technologies.",
-    verificationUrl: "https://docker.com/verification",
-    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=200&q=80"
+    name: "Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge",
+    issuer: "Google",
+    date: "2024",
+    description: "Skill badge demonstrating the ability to inspect and analyze rich documents using Google Gemini's multimodal capabilities and retrieval-augmented generation (RAG) techniques.",
+    verificationUrl: "https://www.credly.com/badges/ad1c4496-1e11-41f8-bc93-f6856db2d3e5/public_url",
+    image: GOOGLE_Logo
   },
   {
     id: 7,
-    name: "Terraform Associate",
-    issuer: "HashiCorp",
-    date: "2023",
-    description: "Certification validating skills in infrastructure automation using Terraform.",
-    verificationUrl: "https://hashicorp.com/verification",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=200&q=80"
+    name: "AI Foundations",
+    issuer: "IBM",
+    date: "2025",
+    description: "This credential earner has the key knowledge, skills, and values necessary to understand and work with artificial intelligence (AI), and is aware of the implications of AI for the future of work and society in general. ",
+    verificationUrl: "https://www.credly.com/badges/186745d6-6e65-436e-b5bc-9241cba17b0c/public_url",
+    image: IBM_Logo
   },
   {
     id: 8,
-    name: "MongoDB Certified Developer",
-    issuer: "MongoDB",
-    date: "2022",
-    description: "Professional certification demonstrating expertise in MongoDB database development and administration.",
-    verificationUrl: "https://mongodb.com/verification",
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=200&q=80"
+    name: "AWS Educate Machine Learning Foundations",
+    issuer: "Amazon Web Services",
+    date: "2025",
+    description: "Earners of this badge have completed the Machine Learning Foundations training and achieved the required scores on the post-course assessment. ",
+    verificationUrl: "https://www.credly.com/badges/19c2635c-6816-4041-ae47-b61fd98cc12e/public_url",
+    image: AWS_logo
   },
   {
     id: 9,
-    name: "React Developer Certification",
-    issuer: "Meta",
-    date: "2022",
-    description: "Advanced certification showcasing proficiency in React.js development and modern frontend technologies.",
-    verificationUrl: "https://meta.com/verification",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=200&q=80"
-  }
+    name: "Introduction to Cybersecurity",
+    issuer: "Cisco",
+    date: "2024",
+    description: "This course provides a comprehensive introduction to cybersecurity concepts, including network security, threat analysis, and risk management.",
+    verificationUrl: "https://www.credly.com/badges/e490a738-c985-4df7-8b01-ed0d34b5ff41/public_url",
+    image: CISCO_Logo
+  },
 ];
 
 const BadgesPage = () => {
