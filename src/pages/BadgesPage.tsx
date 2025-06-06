@@ -3,9 +3,7 @@ import { Award, ExternalLink, X, Calendar, Building, ArrowLeft } from 'lucide-re
 import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
-import AWS_logo from '../components/Images/Badges/AWS_logo.webp';
 import CISCO_logo from '../components/Images/Badges/CISCO_logo.png';
-/// This file defines the BadgesPage component which displays a collection of professional badges earned throughout a career.
 interface Badge {
   id: number;
   name: string;
