@@ -3,6 +3,7 @@ import { Award, ExternalLink, X, Calendar, Building, ArrowLeft } from 'lucide-re
 import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
+import aws_logo from '../components/Images/Badges/aws_logo.png';
 
 interface Badge {
   id: number;
@@ -49,7 +50,7 @@ const badges: Badge[] = [
     date: "2025",
     description: "Introduction to Generative AI using AWS services, covering foundational concepts and practical applications.",
     verificationUrl: "https://www.credly.com/badges/11cc67a4-9c6c-4e77-8e8b-11e97fb84604/public_url",
-    image: AWS_logo
+    image: aws_logo
   },
   {
     id: 5,
@@ -85,16 +86,7 @@ const badges: Badge[] = [
     date: "2025",
     description: "Earners of this badge have completed the Machine Learning Foundations training and achieved the required scores on the post-course assessment. ",
     verificationUrl: "https://www.credly.com/badges/19c2635c-6816-4041-ae47-b61fd98cc12e/public_url",
-    image: AWS_logo
-  },
-  {
-    id: 9,
-    name: "Introduction to Cybersecurity",
-    issuer: "Cisco",
-    date: "2024",
-    description: "This course provides a comprehensive introduction to cybersecurity concepts, including network security, threat analysis, and risk management.",
-    verificationUrl: "https://www.credly.com/badges/e490a738-c985-4df7-8b01-ed0d34b5ff41/public_url",
-    image: CISCO_logo
+    image: aws_logo
   },
 ];
 
