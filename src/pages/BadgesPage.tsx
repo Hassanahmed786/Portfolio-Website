@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
 import AWS_logo from '../components/Images/Badges/AWS_logo.webp';
-import CISCO_Logo from '../components/Images/Badges/CISCO_Logo.png';
+import CISCO_logo from '../components/Images/Badges/CISCO_logo.png';
 
 interface Badge {
   id: number;
@@ -96,7 +96,7 @@ const badges: Badge[] = [
     date: "2024",
     description: "This course provides a comprehensive introduction to cybersecurity concepts, including network security, threat analysis, and risk management.",
     verificationUrl: "https://www.credly.com/badges/e490a738-c985-4df7-8b01-ed0d34b5ff41/public_url",
-    image: CISCO_Logo
+    image: CISCO_logo
   },
 ];
 
