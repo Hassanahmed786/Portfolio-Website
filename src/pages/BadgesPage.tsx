@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import IBM_Logo from '../components/Images/Badges/IBM_Logo.webp';
 import GOOGLE_Logo from '../components/Images/Badges/GOOGLE_Logo.webp';
 import aws_logo from '../components/Images/Badges/aws_logo.png';
+import cisco_logo from '../components/Images/Badges/cisco_logo.png';
+import MICROSOFT_Logo from '../components/Images/Badges/MICROSOFT_Logo.png';
+import GOOGLE1_LOGO from '../components/Images/Badges/GOOGLE1_LOGO.webp';
 
 interface Badge {
   id: number;
@@ -88,6 +91,25 @@ const badges: Badge[] = [
     verificationUrl: "https://www.credly.com/badges/19c2635c-6816-4041-ae47-b61fd98cc12e/public_url",
     image: aws_logo
   },
+  {
+    id: 9,
+    name: "Introduction to Cybersecurity",
+    issuer: "Cisco",
+    date: "2024",
+    description: "This certification provides foundational knowledge of cybersecurity concepts, principles, and practices, including network security, threat management, and risk assessment.",
+    verificationUrl: "https://www.credly.com/badges/e490a738-c985-4df7-8b01-ed0d34b5ff41/public_url",
+    image: cisco_logo
+  },
+  {
+    id: 11,
+    name: "Google Data Analytics Professional Certificate (v2)",
+    issuer: "Google",
+    date: "2025",
+    description: "This professional certificate program provides learners with the skills and knowledge needed to become proficient in data analytics, including data cleaning, analysis, visualization, and reporting.",
+    verificationUrl: "https://www.credly.com/badges/4e2d7597-496b-4e92-aaf7-12df46f8265b/public_url",
+    image: GOOGLE1_LOGO
+  }
+
 ];
 
 const BadgesPage = () => {
